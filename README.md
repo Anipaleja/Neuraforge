@@ -64,7 +64,7 @@ neuraforge/
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/yourusername/neuraforge.git
+git clone https://github.com/anipaleja/NeuraForge.git
 cd neuraforge
 ```
 
