@@ -59,7 +59,7 @@ neuraforge/
 ├── examples/ # Simple usage scripts and demos
 └── main.py # Entry point to the system
 ```
-## 🚀 Quickstart
+## Quickstart
 
 ### 1. Clone the repo
 
