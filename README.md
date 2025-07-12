@@ -59,4 +59,128 @@ neuraforge/
 ├── examples/ # Simple usage scripts and demos
 └── main.py # Entry point to the system
 ```
+## 🚀 Quickstart
 
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/yourusername/neuraforge.git
+cd neuraforge
+```
+
+2. Install dependencies
+
+> Neuraforge keeps dependencies minimal and human-readable.
+
+```bash
+pip install -r requirements.txt
+```
+
+> By default, only pure Python is used. You can optionally install torch for low-level tensor ops:
+
+```bash
+pip install torch
+```
+
+3. Run your first agent
+```bash
+python main.py --mode basic
+```
+
+> This will initialize a simple agent and run it through a sandbox environment for debugging and demonstration.
+
+⚙️ Configuration
+All model parameters, training configs, and agent behaviors are defined via .yaml or .json files located in configs/.
+
+Example:
+
+```yaml
+agent:
+  name: ForgeBot
+  memory: episodic
+  reasoning: recurrent
+  actions: [math, text_output]
+model:
+  type: MLP
+  layers: [128, 256, 128]
+  activation: relu
+training:
+  optimizer: sgd
+  learning_rate: 0.001
+  epochs: 100
+```
+
+## Examples
+`examples/minimal_agent.py` – A fully custom agent using hand-coded MLPs
+
+`examples/memory_test.py` – Agent with memory recall and state persistence
+
+`examples/sensor_fusion.py` – Combine text, image, and simulated lidar inputs
+
+`examples/low_level_torch.py` – Using raw torch without high-level helpers
+
+## Future Roadmap
+- Rust/C++ backend module for ultra-low-latency processing
+- Multi-agent sandbox world for collaborative AI behavior
+- Transformer-style reasoning from scratch
+- Integration with simulated environments (Unity, Gym)
+- Vector DB & retrieval-based memory
+- Web control interface for live agent feedback
+
+## Contributing
+Neuraforge is in early active development and we welcome contributors!
+
+Guidelines:
+Keep code modular, readable, and commented
+
+Avoid unnecessary dependencies
+
+Submit pull requests from feature branches
+
+Include tests for new modules
+
+bash
+Copy
+Edit
+# Linting
+flake8 neuraforge/
+
+# Tests
+pytest tests/
+🧵 Philosophical Principles
+Neuraforge is based on a few key beliefs:
+
+You should understand your AI, not just prompt it
+
+Pretrained models limit creativity and transparency
+
+True AGI demands custom sensory processing and world modeling
+
+Tools should serve builders, not replace them
+
+📄 License
+MIT License
+You are free to use, modify, and distribute this project — just credit the authors and don’t sell closed forks.
+
+✍️ Acknowledgements
+Inspired by:
+
+The simplicity and beauty of early AI systems
+
+Modern agent frameworks like AutoGPT, BabyAGI, Warp, and Fosowl’s agenticSeek
+
+The belief that open, transparent AI should be created from first principles
+
+🌐 Contact
+For support, questions, or collaboration:
+
+📧 anish@neuraforge.ai (example)
+
+🧠 Discord coming soon!
+
+🔬 Feel free to open an issue or pull request!
+
+"Forge your own intelligence. Line by line."
+
+—
+Neuraforge Team
