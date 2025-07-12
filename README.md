@@ -128,59 +128,47 @@ training:
 - Web control interface for live agent feedback
 
 ## Contributing
-Neuraforge is in early active development and we welcome contributors!
+> Neuraforge is in early active development and we welcome contributors!
 
-Guidelines:
-Keep code modular, readable, and commented
+**Guidelines:**
+- Keep code modular, readable, and commented
+- Avoid any unnecessary dependencies
+- Submit pull requests from feature branches
+- Include tests for new modules
 
-Avoid unnecessary dependencies
-
-Submit pull requests from feature branches
-
-Include tests for new modules
-
-bash
-Copy
-Edit
+```bash
 # Linting
 flake8 neuraforge/
-
+```
+```bash
 # Tests
 pytest tests/
-🧵 Philosophical Principles
+```
+
+## Philosophical Principles
 Neuraforge is based on a few key beliefs:
 
-You should understand your AI, not just prompt it
+- You should understand your AI, not just prompt it
+- Pretrained models limit creativity and transparency
+- True AGI demands custom sensory processing and world modeling
+- Tools should serve builders, not replace them
 
-Pretrained models limit creativity and transparency
+## License
+***MIT License***
+> You are free to use, modify, and distribute this project — just credit the authors and don’t sell closed forks.
 
-True AGI demands custom sensory processing and world modeling
+## Acknowledgements
+This project was inspired by the simplicity and beauty of early AI systems, modern agent frameworks like AutoGPT, BabyAGI, Warp, and Fosowl’s agenticSeek, and the belief that open, transparent AI should be created from first principles.
 
-Tools should serve builders, not replace them
-
-📄 License
-MIT License
-You are free to use, modify, and distribute this project — just credit the authors and don’t sell closed forks.
-
-✍️ Acknowledgements
-Inspired by:
-
-The simplicity and beauty of early AI systems
-
-Modern agent frameworks like AutoGPT, BabyAGI, Warp, and Fosowl’s agenticSeek
-
-The belief that open, transparent AI should be created from first principles
-
-🌐 Contact
+## Contact
 For support, questions, or collaboration:
 
-📧 anish@neuraforge.ai (example)
+Email: anipaleja@gmail.com 
 
-🧠 Discord coming soon!
+Discord coming soon!
 
-🔬 Feel free to open an issue or pull request!
+**Feel free to open an issue or pull request!**
 
 "Forge your own intelligence. Line by line."
 
-—
-Neuraforge Team
+**Neuraforge Team**
