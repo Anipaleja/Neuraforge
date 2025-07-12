@@ -29,4 +29,34 @@ This is a system **built for creators** who want to understand what’s going on
   
 
 ## Architecture Overview
+```bash
+[ Input Streams ]
+↓
+[ Sensory Encoders (Vision/Text/Audio) ]
+↓
+[ Perception Modules (CNNs, RNNs, etc.) ]
+↓
+[ Memory Bank ] ←→ [World Model]
+↓
+[ Agent Core (Reasoning + Action Selection) ]
+↓
+[ Output Layer / Tool-Use / Speech / Actuation ]
+```
+
+Each component is plug-and-play. You can use your own architecture or swap out parts (e.g. vision encoder, memory layer) without changing the whole system.
+
+
+## Project Structure
+
+```bash
+neuraforge/
+├── core/ # Fundamental AI components (neural networks, agents, memory)
+├── sensors/ # Vision, audio, lidar, and other input modules
+├── training/ # Trainers, loss functions, optimizers, schedulers
+├── tools/ # Built-in agent tools (e.g. math, file I/O, APIs)
+├── models/ # Saved checkpoints and architecture configs
+├── utils/ # Logging, visualization, CLI helpers
+├── examples/ # Simple usage scripts and demos
+└── main.py # Entry point to the system
+```
 
