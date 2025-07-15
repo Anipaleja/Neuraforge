@@ -89,7 +89,8 @@ python main.py --mode basic
 
 > This will initialize a simple agent and run it through a sandbox environment for debugging and demonstration.
 
-⚙️ Configuration
+### Configuration
+
 All model parameters, training configs, and agent behaviors are defined via .yaml or .json files located in configs/.
 
 Example:
