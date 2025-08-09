@@ -156,7 +156,7 @@ Neuraforge is based on a few key beliefs:
 
 ## License
 ***MIT License***
-> You are free to use, modify, and distribute this project — just credit the authors and don’t sell closed forks.
+> You are free to use, modify, and distribute this project, just credit the authors and don’t sell closed forks.
 
 ## Acknowledgements
 This project was inspired by the simplicity and beauty of early AI systems, modern agent frameworks like AutoGPT, BabyAGI, Warp, and Fosowl’s agenticSeek, and the belief that open, transparent AI should be created from first principles.
@@ -165,8 +165,6 @@ This project was inspired by the simplicity and beauty of early AI systems, mode
 For support, questions, or collaboration:
 
 Email: `anipaleja@gmail.com`
-
-Discord coming soon!
 
 **Feel free to open an issue or pull request!**
 
