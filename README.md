@@ -164,8 +164,6 @@ This project was inspired by the simplicity and beauty of early AI systems, mode
 ## Contact
 For support, questions, or collaboration:
 
-Email: `anipaleja@gmail.com`
-
 **Feel free to open an issue or pull request!**
 
 "Forge your own intelligence. Line by line."
