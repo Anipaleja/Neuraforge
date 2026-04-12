@@ -141,4 +141,11 @@ AXNL is designed to be modular and extensible.
 flake8 axnl/
 pytest tests/
 ```
+## License
 
+`MIT License`
+You are free to use, modify, and distribute this project with attribution. Closed source forks are not permitted.
+
+## Acknowledgements
+
+Inspired by early neural systems, modern agent frameworks like AutoGPT and BabyAGI, and the goal of building fully transparent AI systems from first principles.
