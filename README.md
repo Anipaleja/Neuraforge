@@ -146,14 +146,6 @@ flake8 neuraforge/
 pytest tests/
 ```
 
-## Philosophical Principles
-Neuraforge is based on a few key beliefs:
-
-- You should understand your AI, not just prompt it
-- Pretrained models limit creativity and transparency
-- True AGI demands custom sensory processing and world modeling
-- Tools should serve builders, not replace them
-
 ## License
 ***MIT License***
 > You are free to use, modify, and distribute this project, just credit the authors and don’t sell closed forks.
@@ -165,7 +157,3 @@ This project was inspired by the simplicity and beauty of early AI systems, mode
 For support, questions, or collaboration:
 
 **Feel free to open an issue or pull request!**
-
-"Forge your own intelligence. Line by line."
-
-**Neuraforge Team**
