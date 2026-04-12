@@ -1,14 +1,26 @@
 import typer
-import requests
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
+from core.runtime import build_runtime
 
 app = typer.Typer()
+runtime = build_runtime()
 
 @app.command()
-def predict(image_path: str):
-    with open(image_path, "rb") as f:
-        files = {"file": (image_path, f, "image/jpeg")}
-        response = requests.post("http://localhost:8000/predict", files=files)
-    typer.echo(response.json())
+def step(observation: str):
+    """Run one agent loop iteration for a single observation."""
+    typer.echo(runtime.step(observation))
+
+
+@app.command()
+def run(steps: int = 3):
+    """Run a tiny interactive loop for quick experimentation."""
+    for i in range(steps):
+        obs = typer.prompt(f"Observation {i + 1}")
+        typer.echo(runtime.step(obs))
 
 if __name__ == "__main__":
     app()

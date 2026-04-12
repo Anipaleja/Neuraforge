@@ -1,0 +1,16 @@
+agent:
+  name: AXN-Agent
+  memory: episodic
+  memory_size: 128
+  reasoning: recurrent
+  actions: [math, file, text_output]
+
+model:
+  type: MLP
+  layers: [128, 256, 128]
+  activation: relu
+
+training:
+  optimizer: sgd
+  learning_rate: 0.001
+  epochs: 100
