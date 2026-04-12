@@ -19,6 +19,26 @@ AXNL is built for developers and researchers who want to construct intelligence 
 
 ---
 
+```mermaid
+timeline
+
+    section Core
+        Neural primitives from scratch : done
+        Agent execution layer : done
+
+    section Research
+        Transformer architecture from scratch : in progress
+        Multi-agent sandbox systems : planned
+
+    section Systems
+        Rust/C++ backend acceleration : planned
+        CUDA-level optimization : planned
+
+    section Ecosystem
+        Vector memory database : planned
+        Web control interface : planned
+```
+
 ## Core Features
 
 - Pure Python core with minimal abstraction
@@ -107,23 +127,18 @@ training:
 
 ---
 
-```mermaid
-timeline
-    title AXNL Roadmap
+## Contributing
 
-    section Core
-        Neural primitives from scratch : done
-        Agent execution layer : done
+AXNL is designed to be modular and extensible.
 
-    section Research
-        Transformer architecture from scratch : in progress
-        Multi-agent sandbox systems : planned
+#### Guidelines: 
+- Keep modules independent and composable
+- Avoid unnecessary dependencies
+- Document all components clearly
+- Include tests for new functionality
 
-    section Systems
-        Rust/C++ backend acceleration : planned
-        CUDA-level optimization : planned
-
-    section Ecosystem
-        Vector memory database : planned
-        Web control interface : planned
+```bash
+flake8 axnl/
+pytest tests/
 ```
+
