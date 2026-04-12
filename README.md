@@ -1,110 +1,98 @@
-# Neuraforge
+# AXNL
 
-**Neuraforge** is a general-purpose agentic AI system designed from the ground up for maximum control, transparency, and adaptability. Built in **pure Python** (with optional future support for Rust/C++ extensions), it leverages **hand-coded neural networks** or **low-level PyTorch models**, explicitly avoiding the use of pretrained black-box models.
+**AXNL (Adaptive eXecution Neural Layer)** is a general-purpose agentic AI framework designed for maximum control, transparency, and architectural flexibility. Built in **pure Python** (with optional future support for Rust/C++ extensions), AXNL enables construction of neural systems from first principles using either hand-coded components or low-level PyTorch modules, while explicitly avoiding reliance on pretrained black-box models.
 
-This project prioritizes **modularity**, **agentic reasoning**, **learnability**, and **performance**, creating an ideal platform for research, experimentation, and production-level AI applications without external model dependencies.
+AXNL prioritizes **modularity**, **agentic reasoning**, **interpretability**, and **low-level performance control**, making it a foundation for research, experimentation, and production-grade AI systems without external model dependencies.
 
+---
 
-## Why Neuraforge?
+## Why AXNL?
 
-Most modern AI systems rely heavily on pretrained, bloated models that sacrifice control and transparency for performance. Neuraforge flips this paradigm by:
+Most modern AI frameworks abstract away computation behind pretrained models, trading transparency for convenience. AXNL takes the opposite approach by:
 
-- Giving developers full access to the **fundamental neural components**
-- Empowering custom model design, training, and optimization from scratch
-- Providing an **agentic framework** — capable of long-term memory, autonomous task execution, and sensory integration
-- Staying **lightweight, interpretable, and hackable**
+- Exposing fundamental neural computation primitives
+- Enabling full control over model architecture, training, and optimization pipelines
+- Providing an **agentic execution system** with memory, planning, tool use, and multi-step reasoning
+- Remaining lightweight, composable, and fully inspectable
 
-This is a system **built for creators** who want to understand what’s going on under the hood — not just use someone else’s model.
+AXNL is built for developers and researchers who want to construct intelligence systems from the ground up, not just interface with them.
 
+---
 
 ## Core Features
 
-- **Pure Python Engine**: Written with clarity and transparency in mind, with no reliance on pretrained networks
-- **Custom Neural Networks**: Fully modular MLPs, CNNs, RNNs, attention layers, and more, from scratch or using raw PyTorch
-- **Agentic Architecture**: Agents with memory, planning, multi-step reasoning, tool-use capabilities, and inter-agent communication
-- **Sensor Fusion Ready**: Optional integration with camera, LiDAR, audio, and text input streams
-- **Training & Inference Tools**: Optimizers, schedulers, logging, metrics, and live model debugging
-- **Optional Hardware Extensions**: Future support for Rust/C++ CUDA kernels, edge-device deployment, and custom microcontrollers
-- **No Wrappers or GPT APIs**: You control every neuron.
-  
+- Pure Python core with minimal abstraction
+- Custom neural systems (MLPs, CNNs, RNNs, attention mechanisms)
+- Agentic execution layer with memory and planning
+- Tool-use and inter-agent communication
+- Sensor fusion support (vision, audio, structured data)
+- Training + debugging toolchain (optimizers, schedulers, logging)
+- Extensible backend path for Rust/C++ + CUDA acceleration
+- No pretrained model dependencies
+
+---
 
 ## Architecture Overview
-```bash
-[ Input Streams ]
-↓
-[ Sensory Encoders (Vision/Text/Audio) ]
-↓
-[ Perception Modules (CNNs, RNNs, etc.) ]
-↓
-[ Memory Bank ] ←→ [World Model]
-↓
-[ Agent Core (Reasoning + Action Selection) ]
-↓
-[ Output Layer / Tool-Use / Speech / Actuation ]
+
+```mermaid
+flowchart TD
+    Input[Input Streams: Text / Vision / Audio]
+    Encoder[Sensory Encoders]
+    Rep[Representation Layer: CNN / RNN / Embeddings]
+    Memory[Memory Subsystem]
+    World[World Model]
+    Agent[Agent Execution Core]
+    Action[Tool Use / Action Interface]
+    Output[Environment / Outputs]
+
+    Input --> Encoder
+    Encoder --> Rep
+    Rep --> Memory
+    Memory <--> World
+    World --> Agent
+    Agent --> Action
+    Action --> Output
+    Output --> Input
 ```
 
-Each component is plug-and-play. You can use your own architecture or swap out parts (e.g. vision encoder, memory layer) without changing the whole system.
-
-
-## Project Structure
-
-```bash
-neuraforge/
-├── core/ # Fundamental AI components (neural networks, agents, memory)
-├── sensors/ # Vision, audio, lidar, and other input modules
-├── training/ # Trainers, loss functions, optimizers, schedulers
-├── tools/ # Built-in agent tools (e.g. math, file I/O, APIs)
-├── models/ # Saved checkpoints and architecture configs
-├── utils/ # Logging, visualization, CLI helpers
-├── examples/ # Simple usage scripts and demos
-└── main.py # Entry point to the system
+## Agent Execution Loop
+```mermaid
+flowchart LR
+    Perception --> MemoryUpdate
+    MemoryUpdate --> Reasoning
+    Reasoning --> ActionSelection
+    ActionSelection --> ToolExecution
+    ToolExecution --> Perception
 ```
 ## Quickstart
 
-### 1. Clone the repo
+Clone the repository
+```git clone https://github.com/anipaleja/AXNL.git```
+```cd axnl```
+Install dependencies
+```pip install -r requirements.txt```
 
-```bash
-git clone https://github.com/anipaleja/NeuraForge.git
-cd neuraforge
-```
+Optional backend acceleration:
 
-2. Install dependencies
+```pip install torch```
+Run your first agent
+```python main.py --mode basic```
 
-> Neuraforge keeps dependencies minimal and human-readable.
+## Configuration
 
-```bash
-pip install -r requirements.txt
-```
-
-> By default, only pure Python is used. You can optionally install torch for low-level tensor ops:
-
-```bash
-pip install torch
-```
-
-3. Run your first agent
-```bash
-python main.py --mode basic
-```
-
-> This will initialize a simple agent and run it through a sandbox environment for debugging and demonstration.
-
-### Configuration
-
-All model parameters, training configs, and agent behaviors are defined via .yaml or .json files located in configs/.
-
-Example:
-
+All system behavior is defined via `.yaml` or `.json` files in `configs/`.
 ```yaml
 agent:
-  name: ForgeBot
+  name: AXN-Agent
   memory: episodic
   reasoning: recurrent
   actions: [math, text_output]
+
 model:
   type: MLP
   layers: [128, 256, 128]
   activation: relu
+
 training:
   optimizer: sgd
   learning_rate: 0.001
@@ -112,48 +100,30 @@ training:
 ```
 
 ## Examples
-`examples/minimal_agent.py` – A fully custom agent using hand-coded MLPs
+`examples/minimal_agent.py` — basic agent built from scratch
+`examples/memory_test.py` — persistent memory system
+`examples/sensor_fusion.py` — multi-modal input fusion
+`examples/low_level_torch.py` — raw PyTorch implementation
 
-`examples/memory_test.py` – Agent with memory recall and state persistence
+---
 
-`examples/sensor_fusion.py` – Combine text, image, and simulated lidar inputs
+```mermaid
+timeline
+    title AXNL Roadmap
 
-`examples/low_level_torch.py` – Using raw torch without high-level helpers
+    section Core
+        Neural primitives from scratch : done
+        Agent execution layer : done
 
-## Future Roadmap
-- Rust/C++ backend module for ultra-low-latency processing
-- Multi-agent sandbox world for collaborative AI behavior
-- Transformer-style reasoning from scratch
-- Integration with simulated environments (Unity, Gym)
-- Vector DB & retrieval-based memory
-- Web control interface for live agent feedback
+    section Research
+        Transformer architecture from scratch : in progress
+        Multi-agent sandbox systems : planned
 
-## Contributing
-> Neuraforge is in early active development and we welcome contributors!
+    section Systems
+        Rust/C++ backend acceleration : planned
+        CUDA-level optimization : planned
 
-**Guidelines:**
-- Keep code modular, readable, and commented
-- Avoid any unnecessary dependencies
-- Submit pull requests from feature branches
-- Include tests for new modules
-
-```bash
-# Linting
-flake8 neuraforge/
+    section Ecosystem
+        Vector memory database : planned
+        Web control interface : planned
 ```
-```bash
-# Tests
-pytest tests/
-```
-
-## License
-***MIT License***
-> You are free to use, modify, and distribute this project, just credit the authors and don’t sell closed forks.
-
-## Acknowledgements
-This project was inspired by the simplicity and beauty of early AI systems, modern agent frameworks like AutoGPT, BabyAGI, Warp, and Fosowl’s agenticSeek, and the belief that open, transparent AI should be created from first principles.
-
-## Contact
-For support, questions, or collaboration:
-
-**Feel free to open an issue or pull request!**
