@@ -1,6 +1,6 @@
 # Neuraforge
 
-**Neuraforge** is a cutting-edge, general-purpose agentic AI system designed from the ground up for maximum control, transparency, and adaptability. Built in **pure Python** (with optional future support for Rust/C++ extensions), it leverages **hand-coded neural networks** or **low-level PyTorch models**, explicitly avoiding the use of pretrained black-box models.
+**Neuraforge** is a general-purpose agentic AI system designed from the ground up for maximum control, transparency, and adaptability. Built in **pure Python** (with optional future support for Rust/C++ extensions), it leverages **hand-coded neural networks** or **low-level PyTorch models**, explicitly avoiding the use of pretrained black-box models.
 
 This project prioritizes **modularity**, **agentic reasoning**, **learnability**, and **performance**, creating an ideal platform for research, experimentation, and production-level AI applications without external model dependencies.
 
